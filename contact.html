@@ -10,7 +10,6 @@
 
 body {
     background-image: url("./images/contact-bg.jpg");    
-    background-blend-mode: soft-light;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -18,7 +17,6 @@ body {
     margin: 0px; 
     padding: 0px;
 }
-
 
 /*                  Navbar                */
 
@@ -29,8 +27,6 @@ body {
     padding: 25px;
     position: relative;
     flex-direction: row;
-    padding: 20px;
-    margin: 0px;
     border-bottom-left-radius: 200px;
     border-bottom-right-radius: 200px;
 }
@@ -48,7 +44,7 @@ body {
 .nav-items{
     display: flex;
     flex-direction: row;
-    gap: 30%;
+    gap: 28%;
     margin: auto auto auto 27%;
     padding-left: 0%;
     padding-right: 20%;
@@ -134,8 +130,7 @@ body {
         align-items: center;
         display: flex;
         margin-right: 10%;
-        padding-right: 10px;
-        padding-left: 10px;
+        padding: 0px 10px 0px 10px;
     }
 
     .navopt {
@@ -143,8 +138,6 @@ body {
         padding: 10px;
         display: block;
         color: white;
-        margin-bottom: 0px;
-        padding-bottom: 0px;
     }
 
     .mobile-menu-icon {
@@ -203,99 +196,224 @@ body {
 
 
     /*          Get In Touch            */
-
-#contact{
-    background-image: url("./indexlogoimages/IMG_20231013_170524.jpg");
+#contact {
     background-repeat: no-repeat;
-    height:780px;
-    width: 1510px;
+    height: 780px;
+    width: 100%;
+    margin-top: 5%; 
+    display: flex;
+    flex-direction: column;
 }
 
-.contactheading{
+.contactheading {
     font-family: Georgia, serif;
     color: white;
-    position: absolute;
     font-size: 45px;
-    top: 150px;
-    left: 270px;
+    text-align: center;
 }
 
-#name{
-    padding: 8px 12px;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#name,
+#email,
+#phoneno,
+#message {
+    padding: 10px 12px;
     border-radius: 40px;
-    position: relative;
-    top: 190px;
-    margin-left: 15%;
-    width: 350px;
+    margin-bottom: 25px;
+    width: 340px;
     height: 25px;
 }
 
-#email{
-    position: absolute;
-    top: 230px;
-    padding: 8px 12px;
-    position: relative;
-    border-radius: 40px;
-    margin-bottom: 20px;
-    margin-left: 15%;
-    width: 350px;
-    height: 25px;
+#name,
+#email,
+#phoneno,
+#message {
+    margin-left: 0;
 }
 
-#phoneno{
-    position: absolute;
-    top: 255px;
-    padding: 8px 12px;
-    border-radius: 40px;
-    position: relative;
-    margin-left: 15%;
-    width: 350px;
-    height: 25px;
-}
-
-#message{
-    position: absolute;
-    top: 300px;
-    padding: 8px 12px;
-    border-radius: 40px;
-    position: relative;
-    margin-bottom: 20px;
-    margin-left: 15%;
-    width: 350px;
-    height: 50px;
-}
-
-form>button{
-    height:40px;
+form>button {
+    height: 40px;
     width: 140px;
-    position: relative;
-    top: 380px;
-    right: 265px;
     font-size: 25px;
     border-radius: 20px;
     font-family: Georgia, serif;
 }
 
-/*          footer          */
 
-.footer{
+/*          Footer          */
+
+footer {
+    background-color: #333;
     background-color: rgba(30, 40, 78, 0.5);
-    position: relative;
-    top: 55px;
-    height: 100px;
-    width: 100%;    
-    border-top-right-radius: 500px;
-    border-top-left-radius: 500px;
-
+    border-top-right-radius: 180px;
+    border-top-left-radius: 180px;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
 }
 
-#copyrights{
-    position: relative;
-    top: 35px;
-    margin-left: 35%;
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 0;
+}
+
+
+.footer-column1 {
+    flex: 1;
+    margin: 1%;
+    margin-left: 14%;
+}
+
+.footer-column1 > h3{
+    font-size: 30px;
+    padding: 0px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+    margin: 0px;
+}
+
+.footer-column1 > p{
+    margin: 4%;
+    font-size: 20px;
+    padding: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+}
+
+.footer-column1 > p > a:hover{
+    color:#C7C8CC;
+}
+
+.footer-column1 > p > a{
+    color: #ffff;
+    text-decoration: none;
+    
+}
+
+
+.footer-column2 {
+    flex: 0.6;
+    margin: 1%;
+}
+
+.footer-column2 > ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px
+} 
+
+.footer-column2 > ul > li{
+    margin: 4.6%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+}
+
+.footer-column2 > ul > li > a{
+    color: #ffff;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.footer-column2 > ul > li > a:hover{
+    color: #C7C8CC;
+}
+
+.footer-column3 {
+    flex: 1;
+    margin: 1%;
+    margin-right: 14%;
+}
+
+.footer-column3 > img{
+    height: 80px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+    border-radius: 20px;
+    width: 80px;
+}
+
+.footer-column3 > p{
     font-size: 25px;
-    color: white;
+    margin: 0% 3% 0% 3%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
 }
+
+.foot-list{
+    color: #ffff;
+    list-style: none;
+}
+
+@media (max-width: 700px) {
+    .footer-column1,
+    .footer-column2,
+    .footer-column3 {
+        flex: 100%;
+        margin: 1% 0;
+    }
+
+    .footer-column1 {
+        margin-left: 0;
+    }
+
+    .footer-column2 > ul > li > a:hover{
+        color:#C7C8CC;
+    }
+}
+
+/*                Animation               */
+
+
+@keyframes leftani {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes navani {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rightSideAni {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes SocialAni {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 
 </style>
 
@@ -325,35 +443,65 @@ form>button{
 
     <!--            Get In Touch               -->
 
+    <div id="contact">
 
-
-
-<div id="contact">
+        <h1 class="contactheading">Get In Touch</h1>
     
-    <h1 class="contactheading">Get In Touch</h1>
-
-    <form>
-        <input id="name" type="text" placeholder="Full Name">
-        <br>
-        <input id="email" type="email" placeholder="Email">
-        <br>
-        <input id="phoneno" type="text" placeholder="Phone No">
-        <br>
-        <textarea id="message" placeholder="Message"></textarea>
+        <form>
+            <input id="name" type="text" placeholder="Full Name">
+            <br>
+            <input id="email" type="email" placeholder="Email">
+            <br>
+            <input id="phoneno" type="text" placeholder="Phone No">
+            <br>
+            <textarea id="message" placeholder="Message"></textarea>
+        
+            <button>Submit</button>
     
-        <Button>Submit</Button>
-
-    </form>
-
-</div>
-
+        </form>
+    
+    </div>
+    
 <!--                Footer                  -->
 
-<div class="div2 footer"> 
-    <p id="copyrights">© 2023 Company Ltd. All Rights Reserved.</p>
-</div>
+<footer>
+    <div class="footer-columns">
+        <div class="footer-column1">
+            <h3>Viksit <br>Bharat</h3>
+            <p>Email: <a href="mailto:vsmuthe1971@gmail.com">nothing@gmail.com</a> </p>
+            <p>Phone: <a href="tel:6355325189">+91 2568456239</a> </p>
+        </div>
+    
+        <div class="footer-column2">
+            <ul lass="foot-list"> 
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./service.html">Services</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column3">
+            <img src="./images/company-logo.jpg" alt="Company Logo" style="width: 70px; height: 70px;">
+            <p>Anomaly Detection Using Computer Vision</p>
+        </div>
+    </div>
+</footer>
 
 
+<script>
+    // Add this in your main.js file or in a script tag in your HTML
+
+document.addEventListener('DOMContentLoaded', function () {
+  const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+  const navItems = document.querySelector('.nav-items');
+
+  mobileMenuIcon.addEventListener('click', function () {
+      navItems.classList.toggle('show');
+  });
+});
+
+</script>
 
 </body>
 </html>
