@@ -53,9 +53,10 @@
 }
 
 #logo{
-  align-content: left;
   padding: 0px;
-  margin-left: 16%;
+  margin-left: 20%;
+  position: relative;
+  left: 30px;
   border-radius: 20%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
   animation: leftani 1s ease forwards;
@@ -980,5 +981,66 @@
 
 
 
+/*                Animation               */
 
+
+@keyframes leftani {
+  0% {
+      transform: translateX(-50px);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes navani {
+  0% {
+      transform: translateY(100px);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes rightSideAni {
+  0% {
+      transform: translateX(100px);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes topSideAni {
+  0% {
+      transform: translateY(-100px);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes SocialAni {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
 

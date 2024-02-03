@@ -25,9 +25,10 @@ body {
 }
 
 #logo{
-    align-content: left;
     padding: 0px;
-    margin-left: 16%;
+    margin-left: 20%;
+    position: relative;
+    left: 30px;
     border-radius: 20%;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
     animation: leftani 1s ease forwards;
@@ -455,4 +456,4 @@ footer {
         opacity: 1;
     }
 }
-
+/*yahoo password:  bigbangtheory */

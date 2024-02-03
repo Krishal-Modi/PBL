@@ -27,14 +27,17 @@ body {
     padding: 25px;
     position: relative;
     flex-direction: row;
+    padding: 20px;
+    margin: 0px;
     border-bottom-left-radius: 200px;
     border-bottom-right-radius: 200px;
 }
 
 #logo{
-    align-content: left;
     padding: 0px;
-    margin-left: 16%;
+    margin-left: 20%;
+    position: relative;
+    left: 30px;
     border-radius: 20%;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
     animation: leftani 1s ease forwards;
@@ -44,7 +47,7 @@ body {
 .nav-items{
     display: flex;
     flex-direction: row;
-    gap: 28%;
+    gap: 30%;
     margin: auto auto auto 27%;
     padding-left: 0%;
     padding-right: 20%;
@@ -130,7 +133,8 @@ body {
         align-items: center;
         display: flex;
         margin-right: 10%;
-        padding: 0px 10px 0px 10px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
     .navopt {
@@ -138,6 +142,8 @@ body {
         padding: 10px;
         display: block;
         color: white;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
     }
 
     .mobile-menu-icon {
@@ -420,27 +426,24 @@ footer {
 </head>
 <body>
     
-<!--            Navigation Bar          -->    
-
-
-<header class="container">
-    <nav id="nav">
-            <a href="index.html"><img id="logo" src="./images/company-logo.jpg" width="50" height="50" alt="Website Logo"></a> 
-        <div class="mobile-menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="nav-items" type="none">
-            <li><a href="./index.html" class="navopt">Home</a></li>
-            <li><a href="./service.html" class="navopt">Service</a></li>
-            <li><a href="./contact.html" class="navopt">Contact</a></li>
-            <li><a href="./about.html" class="navopt">About</a></li>
-            <li><a href="./Login.html" class="navopt">Login</a></li>
-        </ul>
-    </nav>
-</header>
-
+    <header class="container">
+        <nav id="nav">
+            <a href="./index.html"><img id="logo" src="./images/company-logo.jpg" width="50" height="50" alt="Website Logo"></a> 
+            <div class="mobile-menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-items" type="none">
+                <li><a href="./index.html" class="navopt">Home</a></li>
+                <li><a href="./service.html" class="navopt">Service</a></li>
+                <li><a href="./contact.html" class="navopt">Contact</a></li>
+                <li><a href="./about.html" class="navopt">About</a></li>
+                <li><a href="./Login.html" class="navopt">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
     <!--            Get In Touch               -->
 
     <div id="contact">
@@ -490,9 +493,8 @@ footer {
 
 
 <script>
-    // Add this in your main.js file or in a script tag in your HTML
-
-document.addEventListener('DOMContentLoaded', function () {
+  
+  document.addEventListener('DOMContentLoaded', function () {
   const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
   const navItems = document.querySelector('.nav-items');
 
@@ -500,6 +502,9 @@ document.addEventListener('DOMContentLoaded', function () {
       navItems.classList.toggle('show');
   });
 });
+
+
+
 
 </script>
 

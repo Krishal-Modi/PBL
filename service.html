@@ -15,27 +15,26 @@
     </head>
     <body>
 
-        <!--    ===== Navigation Bar =====    -->    
-        <header class="container">
-          <nav id="nav">
-                <a href="index.html"><img id="logo" src="./images/company-logo.jpg" width="50" height="50" alt="Website Logo"></a>
-              <div class="mobile-menu-icon">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-              </div>
-              <ul class="nav-items" type="none">
-                  <li><a href="index.html" class="navopt">Home</a></li>
-                  <li><a href="./service.html" class="navopt">Service</a></li>
-                  <li><a href="./contact.html" class="navopt">Contact</a></li>
-                  <li><a href="./about.html" class="navopt">About</a></li>
-                  <li><a href="./Login.html" class="navopt">Login</a></li>
-              </ul>
-          </nav>
-      </header>
+ <!--            Navigation Bar          -->    
+
+<header class="container">
+  <nav id="nav">
+      <a href="./index.html"><img id="logo" src="./images/company-logo.jpg" width="50" height="50" alt="Website Logo"></a> 
+      <div class="mobile-menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      <ul class="nav-items" type="none">
+          <li><a href="./index.html" class="navopt">Home</a></li>
+          <li><a href="./service.html" class="navopt">Service</a></li>
+          <li><a href="./contact.html" class="navopt">Contact</a></li>
+          <li><a href="./about.html" class="navopt">About</a></li>
+          <li><a href="./Login.html" class="navopt">Login</a></li>
+      </ul>
+  </nav>
+</header>
       
-    
-<br><br>
        <!-- service -->
        <div class="text">
         <p> Services are</p>
@@ -134,6 +133,17 @@
 
 
 <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+  const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+  const navItems = document.querySelector('.nav-items');
+
+  mobileMenuIcon.addEventListener('click', function () {
+      navItems.classList.toggle('show');
+  });
+});
+
+
 
             var words = document.getElementsByClassName('word');
 var wordArray = [];
