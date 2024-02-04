@@ -204,14 +204,16 @@ body {
     /*          Get In Touch            */
 #contact {
     background-repeat: no-repeat;
-    height: 780px;
+    height: 670px;
     width: 100%;
-    margin-top: 5%; 
+    margin-top: 2%;
+    margin-right:50%; 
     display: flex;
     flex-direction: column;
 }
 
 .contactheading {
+    padding-bottom: 3%;
     font-family: Georgia, serif;
     color: white;
     font-size: 45px;
@@ -224,15 +226,43 @@ form {
     align-items: center;
 }
 
+@media (min-width: 800px)
+{
+    form {
+    margin-right: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactheading {
+    
+    margin-right: 35%;
+    padding-bottom: 3%;
+    font-family: Georgia, serif;
+    color: white;
+    font-size: 45px;
+    text-align: center;
+}
+
+}
+
 #name,
 #email,
-#phoneno,
+#phoneno{
+    padding: 10px 12px;
+    border-radius: 40px;
+    margin-bottom: 25px;
+    width: 32%;
+    height: 25px;
+}
+
 #message {
     padding: 10px 12px;
     border-radius: 40px;
     margin-bottom: 25px;
-    width: 340px;
-    height: 25px;
+    width: 32%;
+    height: 35px;
 }
 
 #name,
@@ -247,7 +277,38 @@ form>button {
     width: 140px;
     font-size: 25px;
     border-radius: 20px;
+    margin-top: 2%;
     font-family: Georgia, serif;
+}
+
+@media (max-width: 800px)
+{
+#name,
+#email,
+#phoneno{
+    padding: 10px 12px;
+    border-radius: 40px;
+    margin-bottom: 25px;
+    width: 60%;
+    height: 25px;
+}
+
+#message {
+    padding: 10px 12px;
+    border-radius: 40px;
+    margin-bottom: 25px;
+    width: 60%;
+    height: 35px;
+}
+
+form>button {
+    height: 40px;
+    width: 30%;
+    font-size: 25px;
+    border-radius: 20px;
+    font-family: Georgia, serif;
+}
+
 }
 
 
