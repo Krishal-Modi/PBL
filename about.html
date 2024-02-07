@@ -201,77 +201,241 @@
 }
 
         
-        /*        Our Ambition         */
+/*        Our Ambition         */
 
-        .ourambition{
-            color: white;
-            font-family: Georgia, serif;
-            font-size: 50px;
-            margin-left: 40%;
-        }
-        
-        .text1{
-            color: white;
-            font-size: 35px;
-            margin-left:30%;
-        }
+.ourambition{
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    text-align: center;
+    animation: SocialAni 1s ease forwards;
+    animation-delay: calc(.2s * var(--socialAni));
+}
 
-        .text2{
-            color: white;
-            font-size: 35px;
-            margin-right:30%;
-        }
+.text-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
-        .text3{
-            color: white;
-            font-size: 35px;
-            margin-left:30%;
-        }
+.text-div{
+    margin-left: 15%;
+    margin-right: 15%;
+}
 
-        /*          People          */
+.text1{
+    color: white;
+    font-size: 25px;
+    animation: leftani 1s ease forwards;
+    animation-delay: calc(.2s * var(--leftani));
+}
 
-        #container {
-            display: flex;
-            justify-content: center;
-            padding-top: 50px;
-            padding-bottom: 50px;    
-        }
+.text2{
+    color: white;
+    font-size: 25px;
+    animation: rightSideAni 1s ease forwards;
+    animation-delay: calc(.2s * var(--rightSideAni));
+}
 
-        .box {
-            margin: 50px;
-            border: black;
-            border-radius: 20%;
-        }
+.text3{
+    color: white;
+    font-size: 25px;
+    animation: leftani 1s ease forwards;
+    animation-delay: calc(.2s * var(--leftani));
+}
 
-        .box> h3,p {
-            color: white;
-        }
+@media (min-width: 700px){
+    .ourambition{
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 50px;
+    text-align: center;
+}
 
-        .people{
-            border-radius: 20%;
-            justify-items: center;
-            margin-left: 12%
-        }
+.text-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-div{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.text1{
+    color: white;
+    font-size: 35px;
+    animation: leftani 1s ease forwards;
+    animation-delay: calc(.2s * var(--leftani));
+}
+
+.text2{
+    color: white;
+    font-size: 35px;
+    animation: rightSideAni 1s ease forwards;
+    animation-delay: calc(.2s * var(--rightSideAni));
+}
+
+.text3{
+    color: white;
+    font-size: 35px;
+    animation: leftani 1s ease forwards;
+    animation-delay: calc(.2s * var(--leftani));
+}
+
+}
+
+/*          People          */
+
+#container {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;    
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box {
+    
+    margin: 50px;
+    border: black;
+    border-radius: 20%;
+}
+
+.box> h3,p {
+    color: white;
+}
+
+.people{
+    border-radius: 20%;
+    justify-items: center;
+    margin-left: 12%
+}
 
         /*          Footer          */
 
-        .footer{
-            background-color: rgba(30, 40, 78, 0.5);
-            position: relative;
-            top: 100px;
-            height: 100px;
-            width: 100%;    
-            border-top-right-radius: 500px;
-            border-top-left-radius: 500px;
-        }
+footer {
+    background-color: #333;
+    background-color: rgba(30, 40, 78, 0.5);
+    border-top-right-radius: 180px;
+    border-top-left-radius: 180px;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
 
-        #copyrights{
-            position: relative;
-            top: 35px;
-            margin-left: 35%;
-            font-size: 25px;
-            color: white;
-        }
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 0;
+}
+
+
+.footer-column1 {
+    flex: 1;
+    margin: 1%;
+    margin-left: 14%;
+}
+
+.footer-column1 > h3{
+    font-size: 30px;
+    padding: 0px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+    margin: 0px;
+}
+
+.footer-column1 > p{
+    margin: 4%;
+    font-size: 20px;
+    padding: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+}
+
+.footer-column1 > p > a:hover{
+    color:#C7C8CC;
+}
+
+.footer-column1 > p > a{
+    color: #ffff;
+    text-decoration: none;
+    
+}
+
+
+.footer-column2 {
+    flex: 0.6;
+    margin: 1%;
+}
+
+.footer-column2 > ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px
+} 
+
+.footer-column2 > ul > li{
+    margin: 4.6%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+}
+
+.footer-column2 > ul > li > a{
+    color: #ffff;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.footer-column2 > ul > li > a:hover{
+    color: #C7C8CC;
+}
+
+.footer-column3 {
+    flex: 1;
+    margin: 1%;
+    margin-right: 14%;
+}
+
+.footer-column3 > img{
+    height: 80px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+    border-radius: 20px;
+    width: 80px;
+}
+
+.footer-column3 > p{
+    font-size: 25px;
+    margin: 0% 3% 0% 3%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+}
+
+.foot-list{
+    color: #ffff;
+    list-style: none;
+}
+
+@media (max-width: 700px) {
+    .footer-column1,
+    .footer-column2,
+    .footer-column3 {
+        flex: 100%;
+        margin: 1% 0;
+    }
+
+    .footer-column1 {
+        margin-left: 0;
+    }
+
+    .footer-column2 > ul > li > a:hover{
+        color:#C7C8CC;
+    }
+}
+
 
         /*                Animation               */
 
@@ -358,51 +522,57 @@
         </nav>
     </header>
     
-
-    <div>
-        <h1 class="ourambition">Our Ambition</h1><br>
+    <h1 class="ourambition">Our Ambition</h1>
+    <div class="text-container">
+        
+    <div class="text-div">
         <p class="text1" align="center">Normally at public places we are<br> continuously being observed under CCTV <br>Surveillance system 
             setup by<br> the organizers of the concerned authorities.<br><br>
         </p>
+    </div>
 
+    <div class="text-div">
         <p class="text2" align="center">
             Within those CCTV's our model <br>will be easily integrated for experiencing <br>high tech functionality in CCTV's Vision.<br><br>
         </p>
+    </div>
 
+    <div class="text-div">
         <p class="text3" align="center">
             CCTV will become capable for detecting <br>any anomalie under the visible area<br> and alert's nearest police station <br>
             or concerned authorities for performing<br> necessary action against the crime<br>
         </p>
     </div>
+    </div>
 
 <!--            People          -->
 <div id="container">
     <div class="box">
-        <img align="center" class="people" src="./roughimages/teddy-bear.png" width="100" height="100" alt="">
+        <img align="center" class="people" src="./rough-images/teddy-bear.png" width="100" height="100" alt="">
         <h3 align="center">Vishwajeet Muthe</h3>
         <p align="center">AI/ML</p>
     </div>
 
     <div class="box">
-        <img class="people" src="./roughimages/teddy-bear.png" width="100" height="100" alt="">
+        <img class="people" src="./rough-images/teddy-bear.png" width="100" height="100" alt="">
         <h3 align="center">Krishal Modi</h3>
         <p align="center">Frontend Developer</p>
     </div>
 
     <div class="box">
-        <img class="people" src="./roughimages/teddy-bear.png" width="100" height="100" alt="">
+        <img class="people" src="./rough-images/teddy-bear.png" width="100" height="100" alt="">
         <h3 align="center">Vansh Mehta</h3>
         <p align="center">Frontend Developer</p>
     </div>
 
     <div class="box">
-        <img class="people" src="./roughimages/teddy-bear.png" width="100" height="100" alt="">
+        <img class="people" src="./rough-images/teddy-bear.png" width="100" height="100" alt="">
         <h3 align="center">Romil Modi</h3>
         <p align="center">Backend Developer</p>
     </div>
 
     <div class="box">
-        <img class="people" src="./roughimages/teddy-bear.png" width="100" height="100" alt="">
+        <img class="people" src="./rough-images/teddy-bear.png" width="100" height="100" alt="">
         <h3 align="center">Ayush Muktavat</h3>
         <p align="center">Backend Engineer</p>
     </div>
@@ -410,9 +580,29 @@
 
 <!--                Footer                  -->
 
-<div class="div2 footer"> 
-    <p id="copyrights">© 2023 Company Ltd. All Rights Reserved.</p>
-</div>
+<footer>
+    <div class="footer-columns">
+        <div class="footer-column1">
+            <h3>Viksit <br>Bharat</h3>
+                <p>Email: <a href="mailto:#">nothing@gmail.com</a> </p>
+                <p>Phone: <a href="tel:#">+91 2568456239</a> </p>
+        </div>
+    
+        <div class="footer-column2">
+            <ul lass="foot-list"> 
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./service.html">Services</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column3">
+            <img src="./images/company-logo.jpg" alt="Company Logo" style="width: 70px; height: 70px;">
+            <p>Anomaly Detection Using Computer Vision</p>
+        </div>
+    </div>
+</footer>
 
 
 <script>
