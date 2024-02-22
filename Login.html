@@ -17,44 +17,190 @@
                 padding: 0px;
             }
 
-            
-            .home{
-                position: relative;
-                margin: 50px;
-                margin-left: 10%;
-            }
+           
+            /*                  Navbar                */
 
-            .home>button{
-                height: 40px;
-                width: 140px;
-                font-size: 15px;
-                border-radius: 20px;
-                background: rgba(100, 100, 130, 0.8);
-            }
+#nav{
+    justify-content: right;
+    background-color: rgba(30, 40, 78, 0.5);
+    display: flex;
+    padding: 25px;
+    position: relative;
+    flex-direction: row;
+    padding: 20px;
+    margin: 0px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
 
-            .home > button > a{
-                color: white;
-                text-decoration: none;
-            }
+#logo{
+    padding: 0px;
+    margin-left: 20%;
+    position: relative;
+    left: 30px;
+    border-radius: 20%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+    animation: leftani 1s ease forwards;
+    animation-delay: calc(.2s * var(--leftani));
+}
 
-            .contact{
-                position: relative;
-                margin-top: -88px;
-                margin-left: 81%;
-            }
+.nav-items{
+    display: flex;
+    flex-direction: row;
+    gap: 30%;
+    margin: auto auto auto 27%;
+    padding-left: 0%;
+    padding-right: 20%;
+    animation: SocialAni 1s ease forwards;
+    animation-delay: calc(.2s * var(--socialAni));
+}
 
-            .contact>button{
-                height: 40px;
-                width: 140px;
-                font-size: 15px;
-                border-radius: 20px;
-                background: rgba(100, 100, 130, 0.8);
-            }
+.navopt{
+    border: 10px;
+    border-radius: 25%;
+    padding: 7px, 15px;
+    border-radius: 20px;
+    color: White;
+    align-items: right;
+    margin-left: 35px;
+    margin-right: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 100);
+    margin: 0%;
+    font-size: 18px;
+    padding-bottom: 0px;
+    text-decoration: none;
+    font-family: Georgia, serif;
+}
 
-            .contact > button > a{
-                color: white;
-                text-decoration: none;
-            }
+.navopt::after {
+    content: "";
+    display: block;
+    display: flex;
+    height: 2px;
+    width: 0;
+    background-color: #f1f1f1;
+    transition: width .3s;
+}
+
+.navopt:hover::after {
+    width: 100%;
+}
+
+
+/*              Mobile Menu Styling            */
+
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 60%;
+    margin-top: 3%;
+}
+
+.mobile-menu-icon span {
+    height: 2px;
+    width: 20px;
+    background-color: white;
+    margin: 3px;
+    display: block;
+    
+}
+
+@media(max-width: 800px) {
+    
+    #logo{
+        align-content: left;
+        padding: 0px;
+        margin-right: 10%;
+        border-radius: 20%;
+    }   
+    
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        width: 80px;
+        text-align: center;
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        background-color: rgba(30, 40, 78, 0.5);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+    }
+
+    .nav-items.show {
+        align-items: center;
+        display: flex;
+        margin-right: 10%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .navopt {
+        align-content: center;
+        padding: 10px;
+        display: block;
+        color: white;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    .mobile-menu-icon {
+        display: flex;
+        margin-right: 10%;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+
+@media(max-width: 500px) {
+    
+    #logo{
+        align-content: left;
+        padding: 0px;
+        margin-right: -8%;
+        border-radius: 20%;
+    }   
+    
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        width: 75px;
+        text-align: center;
+        position: absolute;
+        top: 88px;
+        left: 38%;
+        background-color: rgba(30, 40, 78, 0.5);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+    }
+
+    .nav-items.show {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        padding-right: 10px;
+    }
+
+    .navopt {
+        padding: 10px;
+        display: block;
+        color: white;
+    }
+
+    .mobile-menu-icon {
+        display: flex;
+        margin-right: 10%;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+}
+
+
             
             .center{
                 position: absolute;
@@ -64,6 +210,7 @@
                 width: 450px;
                 background: rgba(100, 100, 130, 0.8);
                 border-radius: 10px;
+                margin-top: 2%;
             }
 
 
@@ -178,15 +325,30 @@
     </head>
 
     <body>
-        <div class="heading">
-            <div class="home">
-                <button><a href="./index.html">Home</a></button>
-            </div>
+        
+        
+<!--            Navigation Bar          -->    
 
-            <div class="contact">
-                <button><a href="./contact.html">Contact US</a></button>
-            </div>
+<header class="container">
+    <nav id="nav">
+        <a href="./index.html"><img id="logo" src="./images/company-logo.jpg" width="50" height="50" alt="Website Logo"></a> 
+        <div class="mobile-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
+        <ul class="nav-items" type="none">
+            <li><a href="./index.html" class="navopt">Home</a></li>
+            <li><a href="./service.html" class="navopt">Service</a></li>
+            <li><a href="./contact.html" class="navopt">Contact</a></li>
+            <li><a href="./about.html" class="navopt">About</a></li>
+            <li><a href="./register.html" class="navopt">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+        
+        
         <div class="center">
             <h1>Login</h1>
             <form method="post" action="">
@@ -210,6 +372,19 @@
             </form>
         </div>
         
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+  const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+  const navItems = document.querySelector('.nav-items');
+
+  mobileMenuIcon.addEventListener('click', function () {
+      navItems.classList.toggle('show');
+  });
+});
+
+
+        </script>
+
     </body>
 
 </html>

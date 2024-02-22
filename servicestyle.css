@@ -956,30 +956,123 @@
   }
 }
 
-/* footer */
+/*          Footer          */
 
-.footer{
+footer {
+  background-color: #333;
   background-color: rgba(30, 40, 78, 0.5);
-  position: relative;
-  top: 150px;
-  height: 100px;
-  width: 100%;    
-  border-top-right-radius: 500px;
-  border-top-left-radius: 500px;
-  
-
+  border-top-right-radius: 180px;
+  border-top-left-radius: 180px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
 }
 
-#copyrights{
-  position: relative;
-  top: 35px;
-  margin-left: 35%;
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 0;
+}
+
+
+.footer-column1 {
+  flex: 1;
+  margin: 1%;
+  margin-left: 14%;
+}
+
+.footer-column1 > h3{
+  font-size: 30px;
+  padding: 0px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+  margin: 0px;
+}
+
+.footer-column1 > p{
+  margin: 4%;
+  font-size: 20px;
+  padding: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+}
+
+.footer-column1 > p > a:hover{
+  color:#C7C8CC;
+}
+
+.footer-column1 > p > a{
+  color: #ffff;
+  text-decoration: none;
+  
+}
+
+
+.footer-column2 {
+  flex: 0.6;
+  margin: 1%;
+}
+
+.footer-column2 > ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px
+} 
+
+.footer-column2 > ul > li{
+  margin: 4.6%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+}
+
+.footer-column2 > ul > li > a{
+  color: #ffff;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.footer-column2 > ul > li > a:hover{
+  color: #C7C8CC;
+}
+
+.footer-column3 {
+  flex: 1;
+  margin: 1%;
+  margin-right: 14%;
+}
+
+.footer-column3 > img{
+  height: 80px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+  border-radius: 20px;
+  width: 80px;
+}
+
+.footer-column3 > p{
   font-size: 25px;
-  color: white;
-  
+  margin: 0% 3% 0% 3%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
 }
 
+.foot-list{
+  color: #ffff;
+  list-style: none;
+}
 
+@media (max-width: 700px) {
+  .footer-column1,
+  .footer-column2,
+  .footer-column3 {
+      flex: 100%;
+      margin: 1% 0;
+  }
+
+  .footer-column1 {
+      margin-left: 0;
+  }
+
+  .footer-column2 > ul > li > a:hover{
+      color:#C7C8CC;
+  }
+}
 
 /*                Animation               */
 
